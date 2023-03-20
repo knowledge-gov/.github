@@ -1,0 +1,12 @@
+# Constsruct a .gitconfig file .
+gitconfig:  | keysrc=$(keyrc)
+	@echo "##" > $@ &&\
+	cat LICENSE >> $@ &&\
+   echo "##" >> $@ && \
+
+ # Create state file with the key source (e.g., `~/.ssh/id_rsa`). 
+ This is not used directly, but serves as a placeholder to tell you where your key is located when installing this config for yourself. 
+  \# Use 'chmod 0600 $@ && echo "keysrc: ~/.ssh/id_rsa" > state' to replace the line for your own key. 
+   @echo "# Edit this file and run make again to use it. 
+  keysrc: ~/.ssh/id_rsa" > state.local   # This line is set by `make add` and should not be changed manually.  
+   # @echo "Set your key by running 'make add' in this directory." >> state. 
